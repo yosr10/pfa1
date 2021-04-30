@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<title>Layout</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+	 
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a th:href="@{/user/indexEtudiant}">Home</a></li>
+      <li><a th:href="@{/admin/formEtudiant}">Etudiants</a></li>
+<!--       <li><a th:href="#">Enseignants</a></li> -->
+<!--       <li><a th:href="#">Salles</a></li> -->
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+    <li><a  th:href="@{/login?logout}">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<section layout:fragment="content1">
+</section>
+
+<footer>
+<div>TEXT FOOTER</div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="Layout">
+<head>
+<meta charset="utf-8">
+<title>Saisie d'un étudiant</title>
+</head>
+<body>
+	<div layout:fragment="content1">
+	<div class="col-md-6 ">
+	<div class="panel panel-default">
+	<div class="panel-heading">Nouveau Etudiant</div>
+	<div class="panel-body">
+	<form th:action="@{/save}" method="post">
+			<div class="form-group">
+				<label class="control-label">nom</label> <input class="form-control"
+					type="text" name="nom" th:value="${etudiant.nom}"> 
+					<span th:errors="${etudiant.nom}" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label class="control-label">prenom</label> <input class="form-control"
+					type="text" name="prenom" th:value="${etudiant.prenom}"> 
+					<span th:errors="${etudiant.prenom}" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label class="control-label">moyenne</label> <input class="form-control"
+					type="text" name="moyenne" th:value="${etudiant.moyenne}"> 
+					<span th:errors="${etudiant.moyenne}" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label class="control-label">age</label> <input class="form-control"
+					type="text" name="age" th:value="${etudiant.age}"> 
+					<span th:errors="${etudiant.age}" class="text-danger"></span>
+			</div>
+			<button type="submit" class="btn btn-primary">save</button>
+		</form>
+	</div>
+	</div>
+	
+	</div>
+		
+	</div>
+</body>
+</html>
